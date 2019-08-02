@@ -92,6 +92,7 @@ namespace AutoShutdown
             ipcmd(command);
 
             WindowState = FormWindowState.Minimized;
+            btnOK.Enabled = false;
         }
 
         public void ipcmd(object p)
@@ -113,6 +114,7 @@ namespace AutoShutdown
         {
             ipcmd("shutdown  -a ");
             label2.Text = "";
+            btnOK.Enabled = true;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
